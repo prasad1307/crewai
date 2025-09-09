@@ -1,0 +1,18 @@
+research_task:
+  description: >
+    Compile a well-ordered outline of {subject} for a {level} learner. Include: key concepts,
+    simple definitions, core formulas (if any), common pitfalls, and 3–5 practical examples/topics.
+  expected_output: >
+    10–14 bullet points covering the curriculum path for {subject}, in logical order. Each bullet
+    should be a single idea with a short annotation.
+  agent: research_assistant
+
+notes_task:
+  description: >
+    Using the research outline, expand each point into a clear study note section. Include:
+    (1) What/Why, (2) Simple example, (3) Mini checklist or tip. Add a 5-question self-check at the end.
+    Keep the tone {formatting_style} and appropriate for {level}.
+  expected_output: >
+    A markdown document with headings for each section, code/examples where relevant, and a final
+    "Self-Check" quiz block. No code fences around the whole file.
+  agent: note_maker
