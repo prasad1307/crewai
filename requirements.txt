@@ -2,3 +2,10 @@ numpy==1.26.4
 pandas==2.2.1
 scikit-learn==1.5.0
 crewai
+
+# gradio 
+gradio
+langchain
+langchain-openai
+langgraph
+python-dotenv

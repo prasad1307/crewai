@@ -1,0 +1,23 @@
+Gradio - https://www.gradio.app/
+
+Interface:
+   The Class is a high-level abstraction in Gradio that allows you to quickly create a demo for any Python function simply by specifying the input types and the output types.
+
+It turns out that the gradio.Interface class can actually handle 4 different kinds of demos:
+----------------------------------------------------------------------------------------------
+Standard demos: which have both separate inputs and outputs (e.g. an image classifier or speech-to-text model)
+Output-only demos: which don't take any input but produce on output (e.g. an unconditional image generation model)
+Input-only demos: which don't produce any output but do take in some sort of input (e.g. a demo that saves images that you upload to a persistent external database)
+Unified demos: which have both input and output components, but the input and output components are the same. 
+               This means that the output produced overrides the input (e.g. a text autocomplete model)
+
+gr.Blocks()
+------------
+The Blocks app code will be contained within this clause.
+Next come the Components. These are the same Components used in Interface. However, instead of being passed to some constructor,
+Components are automatically added to the Blocks as they are created within the with clause.
+Event listeners define the data flow within the app like button submission, click() event, change() event
+
+Refer demo 9_gr_multistep.py
+A Blocks app is not limited to a single data flow the way Interfaces and also
+can have multi step demo where the output of one model (a speech-to-text model) gets fed into the next model (a sentiment classifier).
